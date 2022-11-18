@@ -1,0 +1,6 @@
+require("after.lsp.lspconfig")
+require("after.lsp.cmp")
+require("after.lsp.null-ls-config")
+require("after.lsp.mason")
+require("after.lsp.lspkind")
+require("after.lsp.lightbulb")
