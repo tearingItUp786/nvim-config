@@ -1,4 +1,6 @@
 local o = vim.opt
+local options = { noremap = true, silent = true }
+local keymap = vim.api.nvim_set_keymap
 
 o.guicursor = ""
 
@@ -22,3 +24,5 @@ o.splitright = true
 o.splitbelow = true
 
 vim.g.mapleader = " "
+
+keymap("n", "<C-Backslash>", "<cmd>ToggleTerm<CR>", options)

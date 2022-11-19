@@ -96,13 +96,22 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- status line
 	use({
-		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	})
+		"alexghergh/nvim-tmux-navigation",
+		config = function()
+			local nvim_tmux_nav = require("nvim-tmux-navigation")
 
-	use("christoomey/vim-tmux-navigator")
+			nvim_tmux_nav.setup({
+				disable_when_zoomed = true, -- defaults to false
+			})
+
+			vim.keymap.set("n", "<C-h>", nvim_tmux_nav.NvimTmuxNavigateLeft)
+			vim.keymap.set("n", "<C-j>", nvim_tmux_nav.NvimTmuxNavigateDown)
+			vim.keymap.set("n", "<C-k>", nvim_tmux_nav.NvimTmuxNavigateUp)
+			vim.keymap.set("n", "<C-l>", nvim_tmux_nav.NvimTmuxNavigateRight)
+			vim.keymap.set("n", "<C-Space>", nvim_tmux_nav.NvimTmuxNavigateNext)
+		end,
+	})
 	use({
 		"kylechui/nvim-surround",
 		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -117,4 +126,26 @@ return require("packer").startup(function(use)
 	use({ "edluffy/hologram.nvim" })
 
 	use({ "akinsho/toggleterm.nvim", tag = "*" })
+
+	-- status line
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	})
+
+	-- pairs
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	})
+
+	--comments
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	})
 end)

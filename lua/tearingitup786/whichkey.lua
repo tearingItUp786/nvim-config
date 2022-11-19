@@ -7,8 +7,11 @@ local mappings = {
 		w = { "<cmd>w<cr>", "Write" },
 		x = { "<cmd>x<cr>", "Write and Quit" },
 	},
-	f = { ":Telescope find_files<CR>", "Telescope Find File" },
-	g = { ":Telescope live_grep<CR>", "Telescope Live Grep" },
+	t = {
+		name = "Telescope",
+		f = { ":Telescope find_files<CR>", "Telescope Find File" },
+		g = { ":Telescope live_grep<CR>", "Telescope Live Grep" },
+	},
 	s = {
 		name = "split",
 		v = { "<cmd>vsplit<cr>", "Vertical Split" },
