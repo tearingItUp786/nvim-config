@@ -21,5 +21,4 @@ o.background = "dark"
 o.splitright = true
 o.splitbelow = true
 
-
 vim.g.mapleader = " "

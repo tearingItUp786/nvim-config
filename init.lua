@@ -1,4 +1,1 @@
-require('settings')
-require('packer-config')
-require('after')
-
+require('tearingitup786')
