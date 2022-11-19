@@ -14,6 +14,10 @@ local mappings = {
 		v = { "<cmd>vsplit<cr>", "Vertical Split" },
 		h = { "<cmd>split<cr>", "Horizontal Split" },
 	},
+	te = {
+		"<cmd>te<cr>",
+		"Terminal",
+	},
 }
 
 wk.register(mappings, { prefix = "<leader>" })
