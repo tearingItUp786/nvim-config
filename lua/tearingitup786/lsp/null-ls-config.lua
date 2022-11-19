@@ -2,6 +2,7 @@ local null_ls_status_ok, null_ls = pcall(require, "null-ls")
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 if not null_ls_status_ok then
+  print("null-ls not found")
 	return
 end
 
@@ -24,6 +25,7 @@ null_ls.setup({
 		diagnostics.shellcheck,
 	},
 	on_attach = function(client, bufnr)
+    print("null-ls attached")
 		if client.supports_method("textDocument/formatting") then
 			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 			vim.api.nvim_create_autocmd("BufWritePre", {
@@ -31,6 +33,7 @@ null_ls.setup({
 				buffer = bufnr,
 				callback = function()
 					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+          print("formatting")
 					vim.lsp.buf.format({ bufnr = bufnr })
 				end,
 			})
