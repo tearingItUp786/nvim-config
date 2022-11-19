@@ -9,6 +9,8 @@ return require("packer").startup(function(use)
 
 	-- theme
 	use("tanvirtin/monokai.nvim")
+	use("folke/tokyonight.nvim")
+	use("EdenEast/nightfox.nvim")
 	use("xiyaowong/nvim-transparent")
 
 	-- treesitter

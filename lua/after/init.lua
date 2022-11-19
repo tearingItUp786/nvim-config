@@ -1,4 +1,5 @@
-require("monokai").setup({ palette = require("monokai").pro })
+-- Lua
+require("after.colors")
 require("after.lsp")
 require("after.tree-sitter")
 require("after.transparent")
