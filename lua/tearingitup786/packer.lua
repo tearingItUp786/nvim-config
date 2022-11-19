@@ -114,10 +114,7 @@ return require("packer").startup(function(use)
 	})
 
 	-- image viewer
-  use({ "edluffy/hologram.nvim" })
+	use({ "edluffy/hologram.nvim" })
 
-  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-    require("toggleterm").setup()
-  end}
-
+	use({ "akinsho/toggleterm.nvim", tag = "*" })
 end)
