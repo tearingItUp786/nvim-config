@@ -112,4 +112,7 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
+
+	-- image viewer
+	use({ "edluffy/hologram.nvim" })
 end)
