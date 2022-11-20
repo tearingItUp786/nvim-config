@@ -148,4 +148,7 @@ return require("packer").startup(function(use)
 			require("Comment").setup()
 		end,
 	})
+
+	-- using packer.nvim
+	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 end)
