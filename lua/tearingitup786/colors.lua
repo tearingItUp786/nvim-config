@@ -39,4 +39,4 @@ require("nightfox").setup({
 	groups = {},
 })
 
-vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme carbonfox")
