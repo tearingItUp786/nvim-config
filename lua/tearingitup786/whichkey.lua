@@ -11,6 +11,8 @@ local mappings = {
 		name = "Telescope",
 		f = { ":Telescope find_files<CR>", "Telescope Find File" },
 		g = { ":Telescope live_grep<CR>", "Telescope Live Grep" },
+		b = { ":Telescope buffers<CR>", "Telescope buffers" },
+		h = { ":Telescope help_tags<CR>", "Telescope help tags" },
 	},
 	s = {
 		name = "split",
