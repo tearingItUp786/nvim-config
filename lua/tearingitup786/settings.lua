@@ -25,4 +25,5 @@ o.splitbelow = true
 
 vim.g.mapleader = " "
 
+-- toggling the terminal was a real bitch
 keymap("n", "<C-Backslash>", "<cmd>ToggleTerm<CR>", options)
