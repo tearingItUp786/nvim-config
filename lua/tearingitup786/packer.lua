@@ -160,4 +160,6 @@ return require("packer").startup(function(use)
 	})
 
 	use({ "tyru/open-browser.vim" })
+	use({ "karb94/neoscroll.nvim" })
+	use({ "windwp/nvim-ts-autotag" })
 end)
