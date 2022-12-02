@@ -27,3 +27,6 @@ vim.g.mapleader = " "
 
 -- toggling the terminal was a real bitch
 keymap("n", "<C-Backslash>", "<cmd>ToggleTerm<CR>", options)
+
+-- allow us to open a browser for links
+keymap("n", "gx", "<Plug>(openbrowser-smart-search)", options)
